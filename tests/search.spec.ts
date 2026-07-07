@@ -10,7 +10,7 @@ test.beforeEach(async ({ loginPage, homePage }) => {
 })
 
 
- let productdata = CsvHelper.readCsv('./Data/ProductData.csv');
+ let productdata = CsvHelper.readCsv('./src/Data/ProductData.csv');
  for(let row of productdata){
 test(`verify search with product -${row.SearchKey}-${row.ProductName}`, async ({ homePage, searchResultPage }) => {
    await homePage.doSearch(row.SearchKey);
