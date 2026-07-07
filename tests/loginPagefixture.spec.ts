@@ -23,7 +23,7 @@ test("user is able to Login test", async ({ loginPage, page }) => {
     await page.pause();
 })
 
-let loginTestData = ExcelHelper.readExcel("Data/LoginexcelData.xlsx", "Sheet1")
+let loginTestData = ExcelHelper.readExcel("./Data/LoginexcelData.xlsx", "Sheet1")
 for (let row of loginTestData) {
     test(`invalid login test with excel data ${row.Username}- ${row.Password}`, async ({ loginPage, page }) => {
         await loginPage.doLogin(row.Username, row.Password);
