@@ -28,7 +28,7 @@ searchResultPage: async({page},use)=>{
 },
 
 testData: async({},use)=>{
-let testData= CsvHelper.readCsv("Data/LoginData.csv")
+let testData= CsvHelper.readCsv("./src/Data/LoginData.csv")
     await use(testData);
 
 },
