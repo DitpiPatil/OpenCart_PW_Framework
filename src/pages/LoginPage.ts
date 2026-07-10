@@ -30,10 +30,10 @@ export class LoginPage extends BasePage {
         return await this.forgottenPwdLink.isVisible();
      }
      
-     async doLogin(username:string, password: string):Promise<void>{
-      console.log(`username: ${username}, password: ${password}`);
+     async doLogin(APPUSERNAME:string, password: string):Promise<void>{
+      console.log(`username: ${APPUSERNAME}, password: ${password}`);
       await this.emailId.clear();
-      await this.emailId.fill(username);
+      await this.emailId.fill(APPUSERNAME);
       await this.page.waitForTimeout(2000);
         await this.password.fill(password);
         await this.loginBtn.click();
