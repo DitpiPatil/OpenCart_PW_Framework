@@ -4,6 +4,7 @@ import { HomePage } from "../src/pages/HomePage";
 
 test.beforeEach(async ({ loginPage, homePage }) => {
     await loginPage.gotoLoginPage();
+    console.log(process.env.APPUSERNAME!, process.env.PASSWORD!);
     await loginPage.doLogin(process.env.APPUSERNAME!, process.env.PASSWORD!);
 
 
