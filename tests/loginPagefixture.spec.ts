@@ -19,7 +19,7 @@ test("forgot password link exist test", async ({ loginPage }) => {
 })
 
 test("user is able to Login test", async ({ loginPage, page }) => {
-    await loginPage.doLogin("diptipatil2014@gmail.com", process.env.PASSWORD!);
+    await loginPage.doLogin(process.env.APPUSERNAME!, process.env.PASSWORD!);
     
 })
 
